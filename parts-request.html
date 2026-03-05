@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMS - Parts Request</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-role="technician" class="vms-app">
+    <nav class="sidebar">
+        <!-- Sidebar logic -->
+        <div class="brand"><i class="bi bi-tools text-primary"></i> VMS Tech</div>
+        <div class="sidebar-heading">Workflow</div>
+        <ul class="sidebar-menu">
+            <li><a href="../dashboards/technician.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+            <li><a href="work-orders.html"><i class="bi bi-card-checklist"></i> Work Orders</a></li>
+            <li class="active"><a href="parts-request.html"><i class="bi bi-box-seam"></i> Parts Request</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <header class="topbar">
+            <h5 class="mb-0 fw-bold ms-3">Request Parts</h5>
+        </header>
+        <div class="container p-4 fade-in">
+            <div class="col-lg-8 mx-auto">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-circle"><i
+                                    class="bi bi-box-seam fs-3 text-primary"></i></div>
+                            <div>
+                                <h4 class="fw-bold mb-0">Requisition Form</h4>
+                                <span class="text-muted">Request parts from the warehouse</span>
+                            </div>
+                        </div>
+                        <form action="work-order-details.html">
+                            <div class="mb-3">
+                                <label class="form-label">Associated Work Order</label>
+                                <select class="form-select form-select-lg" required>
+                                    <option>#WO-4592 (2019 Toyota Camry)</option>
+                                    <option>#WO-4595 (2021 Ford Bronco)</option>
+                                </select>
+                            </div>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Part Name/SKU</label>
+                                    <input type="text" class="form-control form-control-lg"
+                                        placeholder="e.g. Spark Plug / SP-102" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Quantity Required</label>
+                                    <input type="number" class="form-control form-control-lg" min="1" value="1"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Urgency</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="urgency" id="u1"
+                                            value="standard" checked>
+                                        <label class="form-check-label" for="u1">Standard</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="urgency" id="u2"
+                                            value="high">
+                                        <label class="form-check-label text-danger fw-semibold" for="u2">High Priority
+                                            (AOG)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 btn-lg shadow-sm">Submit Auto
+                                Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

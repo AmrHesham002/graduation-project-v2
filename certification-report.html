@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMS - Certification Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <!-- Sidebar logic -->
+        <div class="brand"><i class="bi bi-graph-up-arrow text-primary"></i> VMS Analytics</div>
+        <div class="sidebar-heading">Data & Analytics</div>
+        <ul class="sidebar-menu">
+            <li><a href="../dashboards/data-analyst.html"><i class="bi bi-clipboard-data"></i> Dashboard</a></li>
+            <li><a href="vehicle-health.html"><i class="bi bi-heart-pulse"></i> Vehicle Health</a></li>
+            <li><a href="obd-data.html"><i class="bi bi-usb-drive"></i> OBD Data</a></li>
+            <li class="active"><a href="certification-report.html"><i class="bi bi-patch-check-fill"></i> Emissions</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <header class="topbar">
+            <div class="d-flex align-items-center gap-3">
+                <button id="sidebarToggle" class="btn btn-outline-secondary d-md-none"><i
+                        class="bi bi-list"></i></button>
+                <h5 class="mb-0 fw-bold d-none d-md-block ms-3">Emissions & Certification Report</h5>
+            </div>
+            <button class="btn btn-primary"><i class="bi bi-printer"></i> Print Certificate</button>
+        </header>
+        <div class="container p-4 p-md-5 my-4 bg-white mx-auto shadow-sm border border-2 border-primary border-opacity-25"
+            style="max-width: 800px; color: #2b2d42;">
+            <!-- Print Layout (Light Theme override for printing) -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-0" style="color: #2b2d42;">OFFICIAL EMISSIONS CERTIFICATE</h2>
+                <h5 class="text-muted">Vehicle Service Management System (VMS)</h5>
+                <p>Authorized Inspection Center #49281</p>
+            </div>
+            <div class="row mb-5">
+                <div class="col-6">
+                    <h6 class="fw-bold text-muted text-uppercase">Vehicle Information</h6>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>VIN:</strong> 1HGCM82633AXXXXXX</p>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>Make/Model:</strong> 2018 Honda Accord</p>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>Odometer:</strong> 42,450 mi</p>
+                </div>
+                <div class="col-6 text-end">
+                    <h6 class="fw-bold text-muted text-uppercase">Test Details</h6>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>Test Date:</strong> Oct 24, 2026</p>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>Inspector:</strong> Tech Mike T.</p>
+                    <p style="color: #2b2d42;" class="mb-1"><strong>Result:</strong> <span
+                            class="badge bg-success p-2">PASS</span></p>
+                </div>
+            </div>
+            <h6 class="fw-bold mb-3 border-bottom pb-2">OBD-II Readiness Monitors</h6>
+            <table class="table table-sm">
+                <tbody>
+                    <tr>
+                        <td>Misfire</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel System</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                    <tr>
+                        <td>Comprehensive Component</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                    <tr>
+                        <td>Catalyst</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                    <tr>
+                        <td>Evaporative System</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                    <tr>
+                        <td>Oxygen Sensor</td>
+                        <td class="text-end text-success fw-bold">Ready</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center mt-5 pt-4">
+                <p class="small text-muted mb-4">This vehicle has passed the standardized OBD-II emissions inspection
+                    requirements set by the state authority.</p>
+                <div class="mx-auto border-top border-dark w-50 pt-2">
+                    <span class="text-muted text-uppercase small">Authorized Signature</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
